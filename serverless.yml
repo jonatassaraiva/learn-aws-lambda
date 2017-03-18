@@ -1,0 +1,30 @@
+service: lambda-test-v1
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  memorySize: 512 # optional, default is 1024
+  timeout: 10 # optional, default is 6
+  stage: dev
+  profile: dev
+
+functions:
+  test:
+    handler: src/handler.test # required, handler set in AWS Lambda
+    name: ${self:provider.stage}-lambda-test-v1 # optional, Deployed Lambda name
+    description: Description of what the lambda function does # optional, Description to publish to AWS
+    memorySize: 512 # optional, default is 1024
+    timeout: 10 # optional, default is 6
+
+package:
+  exclude:
+    - '!node_modules/node-fetch/**'
+    - .git/**
+    - tmp/**
+    - test/**
+    - .gitignore
+    - LICENSE
+  include:
+    - src/controller/**
+    - src/utils/**
+    - src/handler.nodejs

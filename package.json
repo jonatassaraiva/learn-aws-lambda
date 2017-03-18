@@ -1,0 +1,29 @@
+{
+  "name": "learn-aws-lambda",
+  "version": "1.0.0",
+  "description": "Project to learn aws lambda",
+  "main": "src/handler.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatassaraiva/learn-aws-lambda.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda"
+  ],
+  "author": "Jonatas Saraiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonatassaraiva/learn-aws-lambda/issues"
+  },
+  "homepage": "https://github.com/jonatassaraiva/learn-aws-lambda#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "node-lambda": "^0.8.13"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "winston": "^2.3.1"
+  }
+}
